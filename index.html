@@ -1,10 +1,20 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html>
   <head>
     <meta charset="utf-8">
-    <title>Hello Coursera</title>
+    <script src="angular.min.js"></script>
+    <script src="app.js"></script>
+    <title>Name Calculator</title>
   </head>
-  <body>
-    <h1>Hello Coursera</h1>
+  <body ng-app="NameCalculator">
+    <h1>Name Calculator</h1>
+    <div ng-controller="NameCalculatorController">
+      Your Name:
+    <div>
+      <input type="text" ng-model="name" ng-keyup="calculateName()"></input>
+    </div>
+    <div>
+      Calculated Name value is : {{count}}
+    </div>
   </body>
 </html>
